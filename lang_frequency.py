@@ -2,9 +2,9 @@ from collections import Counter
 import sys
 import re
 
-words_dict = Counter()
 
 def load_data(filepath):
+    words_dict = Counter()
     file_object = open(filepath, "r")
     lines = file_object.readlines()
     for line in lines:
@@ -15,7 +15,8 @@ def load_data(filepath):
 
 
 def get_most_frequent_words(words_dict):
-    for word in words_dict.most_common(10):
+    frequent_words_number = 10
+    for word in words_dict.most_common(frequent_words_number):
         print('{} found {} times'.format(word[0], word[1]))
 
 

@@ -1,9 +1,9 @@
 # Frequency Analysis of Words
 
-Программа подсчитывает частоту слов, встречаемых в тексте и печатает первые 10 самых частых
-Учитываются слова длиной от 2 букв, потому что однобуквенные слова не несут смысловой нагрузки
-Агрументом командной строки надо передать путь до файла с текстом.
-Например: python lang_frequency.py war_and_piece.txt
+A program calculate frequency of words and print the first 10 most frequent
+Words with a length of 2 letters are taken into account, because one-letter words do not carry a semantic load
+The command line argument must be passed to the file with the text
+Example: python lang_frequency.py war_and_piece.txt
 
 # Project Goals
 
