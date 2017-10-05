@@ -1,20 +1,16 @@
 from collections import Counter
-import sys
+import argparse
 import re
 
 
 def load_data(filepath):
     with open(filepath, "r") as file_object:
-        lines = file_object.readlines()
-    return lines
+        return file_object.read()
+
 
 def count_words(lines):
-    words_dict = Counter()
-    for line in lines:
-        match_patterns = re.findall(r'\b\w{2,25}\b', line)
-        for word in match_patterns:
-            words_dict[word] += 1
-    return words_dict
+    match_patterns = re.findall(r'\b\w{2,25}\b', lines.lower())
+    return Counter(match_patterns)
 
 
 def get_most_frequent_words(words_dict):
@@ -23,7 +19,9 @@ def get_most_frequent_words(words_dict):
 
 
 if __name__ == '__main__':
-    lines = load_data(sys.argv[1])
-    words_dict = count_words(lines)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("file_name", help="write name of json file")
+    text = load_data(parser.parse_args().file_name)
+    words_dict = count_words(text)
     for word in get_most_frequent_words(words_dict):
         print('{} found {} times'.format(word[0], word[1]))
