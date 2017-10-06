@@ -8,8 +8,8 @@ def load_data(filepath):
         return file_object.read()
 
 
-def count_words(lines):
-    match_patterns = re.findall(r'\b\w{2,25}\b', lines.lower())
+def count_words(text):
+    match_patterns = re.findall(r'\b\w{2,25}\b', text.lower())
     return Counter(match_patterns)
 
 
