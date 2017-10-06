@@ -17,8 +17,10 @@ The command line argument must be passed to the file with the text.
 то found 2262 times
 сказал found 1704 times
 было found 1470 times
-за found 1419 times```
+за found 1419 times
+```
 
 # Project Goals
 
--The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
+The code is written for educational purposes.
+Training course for web-developers - [DEVMAN.org](https://devman.org)
